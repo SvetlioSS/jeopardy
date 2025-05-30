@@ -50,7 +50,25 @@ const StartGame = () => {
       });
   };
 
-  const validateAnswer = () => {
+  const validateAnswer = async () => {
+    // const prompt = `
+    //   You are a trivia judge for a Jeopardy! game. Given a trivia question and a player's answer, decide if the player's answer is factually correct and matches what would be expected for that question. Return only "true" or "false".
+
+    //   Question: ${question}
+    //   Player Answer: ${answer}
+    //   Is the answer correct?
+    //   `;
+
+    // const res = await fetch("/api/validate-answer", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({ prompt }),
+    // });
+
+    // const data = await res.json();
+    // console.log(data.response);
     const isValid = question.Answer === answer;
     if (isValid) {
       setPoints(
